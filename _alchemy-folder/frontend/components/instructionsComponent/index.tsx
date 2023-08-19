@@ -126,13 +126,12 @@ function MintTokens(params: { address: `0x${string}` | undefined }) {
 
   return (
     <div className={styles.buttonTXConf}>
-      <p>Token minted! Refresh to mint again.</p>
-      <br/>Tx hash: <a href={ETHScanLink}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {shortHash}
-          </a>
+      Tx hash: <a href={ETHScanLink}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        {shortHash}
+      </a>
     </div>
   )
 }
