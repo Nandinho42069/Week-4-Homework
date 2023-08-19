@@ -125,8 +125,8 @@ function MintTokens(params: { address: `0x${string}` | undefined }) {
   const shortHash = hash.slice(0,5) + "..." + hash.slice(-3)
 
   return (
-    <button className={styles.button}>
+    <div className={styles.button}>
       TX: <a href={ETHScanLink}>{shortHash}</a>
-    </button>
+    </div>
   )
 }
