@@ -80,8 +80,10 @@ border-radius: 8px;
 	border-radius: 12px;
 	cursor: pointer;
 	transition: all .5s;
+	
 	color: white;
 	font-style: normal;
+	font-size: 18px;
 }
 
 .button:hover{

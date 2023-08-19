@@ -46,7 +46,7 @@ function WalletInfo() {
   if (isConnecting)
     return (
       <div>
-        <p>Loading...</p>
+        <p>Connecting wallet...</p>
       </div>
     );
   if (isDisconnected)
@@ -96,7 +96,12 @@ function MintTokens(params: { address: `0x${string}` | undefined }) {
     body: JSON.stringify({ address: params.address })
   };
 
-  if (isLoading) return <p>Requesting tokens from API...</p>;
+  if (isLoading) return (
+    <button className={styles.button}>
+      Requesting tokens from API...
+    </button>
+  )
+
   if (!data) return <p>
     <button
         disabled={isLoading}
@@ -114,5 +119,14 @@ function MintTokens(params: { address: `0x${string}` | undefined }) {
       Request Tokens
     </button>
   </p>;
-  return <p>Tokens Minted.</p>
+
+  const hash = String(data.txHash);
+  const ETHScanLink = "https://sepolia.etherscan.io/tx/" + hash;
+  const shortHash = hash.slice(0,5) + "..." + hash.slice(-3)
+
+  return (
+    <button className={styles.button}>
+      TX: <a href={ETHScanLink}>{shortHash}</a>
+    </button>
+  )
 }
