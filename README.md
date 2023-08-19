@@ -17,3 +17,6 @@ Linus - We could create separate pages in the frontend for each action we want t
 
 ## What we're working on right now
 Linus - Editing the frontend page to display the correct information.
+
+## To-Do's
+Make mint method in backend, and link to frontend with API.
