@@ -6,54 +6,41 @@ export default function InstructionsComponent() {
       <header className={styles.header_container}>
         <div className={styles.header}>
           <h1>
-            create<span>-web3-dapp</span>
+            Web3<span> Voting dApp</span>
           </h1>
-          <h3>The ultimate solution to create web3 applications</h3>
+          <h3>The Encode Club's Solidity Bootcamp fourth week homework</h3>
+          <p>Completed by Nanda Girish, Antony Siahaan, Adam Czopp and Linus Kelsey.</p>
         </div>
       </header>
 
       <div className={styles.buttons_container}>
         <a
           target={"_blank"}
-          href={"https://createweb3dapp.alchemy.com/#components"}
         >
           <div className={styles.button}>
-            {/* <img src="https://static.alchemyapi.io/images/cw3d/Icon%20Medium/lightning-square-contained-m.svg" width={"20px"} height={"20px"} /> */}
-            <p>Add Components</p>
+            <p>Delegate Vote</p>
           </div>
         </a>
         <a
           target={"_blank"}
-          href={"https://createweb3dapp.alchemy.com/#templates"}
         >
           <div className={styles.button}>
-            {/* <img src="https://static.alchemyapi.io/images/cw3d/Icon%20Medium/lightning-square-contained-m.svg" width={"20px"} height={"20px"} /> */}
-            <p>Explore Templates</p>
+            <p>Place Vote</p>
           </div>
         </a>
         <a
           target={"_blank"}
-          href={"https://docs.alchemy.com/docs/create-web3-dapp"}
         >
           <div className={styles.button}>
-            <img
-              src="https://static.alchemyapi.io/images/cw3d/Icon%20Large/file-eye-01-l.svg"
-              width={"20px"}
-              height={"20px"}
-            />
-            <p>Visit Docs</p>
+            <p>See Current Votes</p>
           </div>
         </a>
         <a>
           <div className={styles.button}>
-            {/* <img src="https://static.alchemyapi.io/images/cw3d/Icon%20Medium/lightning-square-contained-m.svg" width={"20px"} height={"20px"} /> */}
-            <p>Contribute</p>
+            <p>Mint Voting Tokens</p>
           </div>
         </a>
       </div>
-      <p className={styles.get_started}>
-        Get started by editing this page in <span>/pages/index.js</span>
-      </p>
     </div>
   );
 }
