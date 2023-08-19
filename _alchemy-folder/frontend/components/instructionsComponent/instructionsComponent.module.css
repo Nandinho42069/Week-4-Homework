@@ -64,22 +64,24 @@ border-radius: 8px;
 
 .button{
 	display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 
-padding: 24px 32px;
-gap: 12px;
+	padding: 24px 32px;
+	gap: 12px;
 
-width: 392px;
-height: 80px;
+	width: 392px;
+	height: 80px;
 
-background: rgba(0, 0, 0, 0.9);
-/* Grayscale/Metal */
-box-shadow: 2px 2px 3px rgb(142, 142, 142);
-border-radius: 12px;
-cursor: pointer;
-transition: all .5s;
+	background: rgba(0, 0, 0, 0.9);
+	/* Grayscale/Metal */
+	box-shadow: 2px 2px 3px rgb(142, 142, 142);
+	border-radius: 12px;
+	cursor: pointer;
+	transition: all .5s;
+	color: white;
+	font-style: normal;
 }
 
 .button:hover{

@@ -13,9 +13,7 @@ export default function InstructionsComponent() {
           <p>Completed by Nanda Girish, Antony Siahaan, Adam Czopp and Linus Kelsey.</p>
         </div>
       </header>
-      <div>
-        <WalletInfo></WalletInfo>
-      </div>
+      <WalletInfo></WalletInfo>
       <PageBody></PageBody>
     </div>
   );
@@ -63,32 +61,32 @@ function WalletInfo() {
 
 function DelegateVote() {
   return (
-    <div className={styles.button}>
+    <button className={styles.button}>
       <p>Delegate Vote</p>
-    </div>
+    </button>
   )
 }
 
 function PlaceVote() {
   return (
-    <div className={styles.button}>
+    <button className={styles.button}>
       <p>Place Vote</p>
-    </div>
+    </button>
   )
 }
 
 function SeeCurrentVotes() {
   return (
-    <div className={styles.button}>
+    <button className={styles.button}>
       <p>See Current Votes</p>
-    </div>
+    </button>
   )
 }
 
 function MintTokens() {
   return (
-    <div className={styles.button}>
+    <button className={styles.button}>
       <p>Mint Voting Tokens</p>
-    </div>
+    </button>
   )
 }
