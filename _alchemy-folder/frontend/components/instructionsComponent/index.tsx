@@ -1,5 +1,6 @@
 import { useAccount, useNetwork } from "wagmi";
 import styles from "./instructionsComponent.module.css";
+import { useState } from "react";
 
 export default function InstructionsComponent() {
   return (
@@ -20,12 +21,14 @@ export default function InstructionsComponent() {
 }
 
 function PageBody() {
+  const { address } = useAccount();
+
   return (
     <div className={styles.buttons_container}>
       <DelegateVote></DelegateVote>
       <PlaceVote></PlaceVote>
       <SeeCurrentVotes></SeeCurrentVotes>
-      <MintTokens></MintTokens>
+      <MintTokens address={address}></MintTokens>
     </div>
   )
 }
@@ -83,10 +86,33 @@ function SeeCurrentVotes() {
   )
 }
 
-function MintTokens() {
-  return (
-    <button className={styles.button}>
-      <p>Mint Voting Tokens</p>
+function MintTokens(params: { address: `0x${string}` | undefined }) {
+  const [data, setData] = useState<any>(null);
+  const [isLoading, setLoading] = useState(false);
+
+  const requestOptions = {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ address: params.address })
+  };
+
+  if (isLoading) return <p>Requesting tokens from API...</p>;
+  if (!data) return <p>
+    <button
+        disabled={isLoading}
+        className={styles.button}
+        onClick={() => {
+          setLoading(true);
+          fetch("http://localhost:3001/mint-tokens", requestOptions)
+          .then((res) => res.json())
+          .then((data) => {
+            setData(data);
+            setLoading(false)
+          });
+        }}
+    >
+      Request Tokens
     </button>
-  )
+  </p>;
+  return <p>Tokens Minted.</p>
 }
