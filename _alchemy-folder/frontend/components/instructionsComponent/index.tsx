@@ -14,33 +14,43 @@ export default function InstructionsComponent() {
       </header>
 
       <div className={styles.buttons_container}>
-        <a
-          target={"_blank"}
-        >
-          <div className={styles.button}>
-            <p>Delegate Vote</p>
-          </div>
-        </a>
-        <a
-          target={"_blank"}
-        >
-          <div className={styles.button}>
-            <p>Place Vote</p>
-          </div>
-        </a>
-        <a
-          target={"_blank"}
-        >
-          <div className={styles.button}>
-            <p>See Current Votes</p>
-          </div>
-        </a>
-        <a>
-          <div className={styles.button}>
-            <p>Mint Voting Tokens</p>
-          </div>
-        </a>
+        <DelegateVote></DelegateVote>
+        <PlaceVote></PlaceVote>
+        <SeeCurrentVotes></SeeCurrentVotes>
+        <MintTokens></MintTokens>
       </div>
     </div>
   );
+}
+
+function DelegateVote() {
+  return (
+    <div className={styles.button}>
+      <p>Delegate Vote</p>
+    </div>
+  )
+}
+
+function PlaceVote() {
+  return (
+    <div className={styles.button}>
+      <p>Place Vote</p>
+    </div>
+  )
+}
+
+function SeeCurrentVotes() {
+  return (
+    <div className={styles.button}>
+      <p>See Current Votes</p>
+    </div>
+  )
+}
+
+function MintTokens() {
+  return (
+    <div className={styles.button}>
+      <p>Mint Voting Tokens</p>
+    </div>
+  )
 }
