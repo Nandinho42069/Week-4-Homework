@@ -97,9 +97,9 @@ function MintTokens(params: { address: `0x${string}` | undefined }) {
   };
 
   if (isLoading) return (
-    <button className={styles.button}>
+    <div className={styles.button}>
       Requesting tokens from API...
-    </button>
+    </div>
   )
 
   if (!data) return <p>
@@ -125,8 +125,14 @@ function MintTokens(params: { address: `0x${string}` | undefined }) {
   const shortHash = hash.slice(0,5) + "..." + hash.slice(-3)
 
   return (
-    <div className={styles.button}>
-      TX: <a href={ETHScanLink}>{shortHash}</a>
+    <div className={styles.buttonTXConf}>
+      <p>Token minted! Refresh to mint again.</p>
+      <br/>Tx hash: <a href={ETHScanLink}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {shortHash}
+          </a>
     </div>
   )
 }
