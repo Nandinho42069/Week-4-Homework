@@ -19,3 +19,5 @@ Linus - We could create separate pages in the frontend for each action we want t
 Linus - Building mint function in backend and linking with API; ballot contract tidy up;
 Adam - transfer and vote
 Antony - Adding features to homepage
+
+TEST COMMIT
